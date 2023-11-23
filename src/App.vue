@@ -57,6 +57,10 @@ export default {
   padding-top: 20px;
 }
 
+.titre:hover{
+  text-decoration-line: underline;
+}
+
 /*style sur le footer  */
 .footer_container {
   background-color: #383333;
