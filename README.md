@@ -1,19 +1,21 @@
 # portfolio
 
-## Project setup
+## Copie du projet en local
+```
+git clone https://github.com/tealc94/portfolio.git
+```
+
+## Changer de dossier
+```
+cd portfolio
+```
+
+## Installation du Project
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilation et rechargement
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
