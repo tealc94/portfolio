@@ -1,30 +1,77 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+<template>  
+  <nav class="menu">
+    <router-link class="titre" to="/">Accueil</router-link> |
+    <router-link class="titre" :to= "{ path: '/', hash: 'container-quiSuisJe' }" @click.native="navigatePresentation">Présentation</router-link> |
+    <router-link class="titre" :to= "{ path: '/', hash: 'container_creaction' }" @click.native="navigateCreation">Mes Créations</router-link> |
+    <router-link class="titre" :to= "{ path: '/', hash: 'container_contact' }" @click.native="navigateContact">Contact</router-link>
   </nav>
-  <router-view/>
+  
+  <router-view />  
+  
+   <footer>
+    <div class="footer_container">
+      <div>
+        <a target="_blank" href="https://fr.linkedin.com/"><img class="footer_img" src="../src/assets/linkedin.png" alt="image linkedin"/></a>
+        <a target="_blank" href="https://github.com/"><img class="footer_img" src="../src/assets/signe-github.png" alt="image github"/></a>
+      </div>
+      <div>
+        <small>Dernière mise à jour le 18/11/2023</small>
+      </div>
+    </div>
+  </footer>
 </template>
 
+<script>
+export default {
+  name: 'App',
+  methods: {
+    navigatePresentation(){
+      this.$router.push({ path: '/' }).then(() => {
+        window.location.hash = '#container-quiSuisJe';
+      });
+    },
+    navigateCreation(){
+      this.$router.push({ path: '/' }).then(() => {
+        window.location.hash = '#container_creaction';
+      });
+    },
+    navigateContact(){
+      this.$router.push({ path: '/' }).then(() => {
+        window.location.hash = '#container_contact';
+      });
+    },
+    openNewTab(){
+      window.open('../public/test.html', '_blank');      
+    }
+  }  
+}
+
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*Style la barre de nav*/
+.menu {
+  background-color: #383333;
+  height: 100%;
   text-align: center;
-  color: #2c3e50;
+  padding-top: 20px;
 }
 
-nav {
-  padding: 30px;
+/*style sur le footer  */
+.footer_container {
+  background-color: #383333;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.footer_img {
+  padding: 5px;
 }
 </style>

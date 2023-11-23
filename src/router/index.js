@@ -1,24 +1,38 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import home from '../views/Home.vue'
+import PageNotFound from '../views/404.vue'
+import test from '../views/monCV.vue'
+import SpecialHTMLComponent from '../../public/monCV.html'
+import filePDF from '../../public/Cahier_des_charges_La_socketterie.pdf'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'Home',
+    hash: 'container-quiSuisJe',
+    hash: 'container_creaction',
+    hash: 'container_contact',
+    component: home
+  },  
+  {
+    path: '/public/monCV.html',
+    name: 'PageCV',
+    component: SpecialHTMLComponent
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/public/Cahier_des_charges_La_socketterie.pdf',
+    name: 'PagePDF',
+    component: filePDF
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'error404',
+    component: PageNotFound
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(), //process.env.BASE_URL
   routes
 })
 
