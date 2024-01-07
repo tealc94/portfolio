@@ -12,7 +12,7 @@
         Je suis Jean-Yves PIERRE-GEROME, responsable du supoprt technique pour
         un éditeur de logiciel. En raison de la collaboration continue avec
         notre équipe de développeurs, j'ai décidé de suivre une formation de
-        développeur wev pour approfondir ma compréhension de ce domaine.
+        développeur web pour approfondir ma compréhension de ce domaine.
       </p>
     </div>
 
