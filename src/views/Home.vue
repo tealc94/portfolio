@@ -9,7 +9,7 @@
       <h2>Qui suis-je ?</h2>
       <a href="#container-accueil"><img class="photo" src="../assets/photo.jpg" alt="photo"/></a>
       <p>
-        Je suis Jean-Yves PIERRE-GEROME, responsable du supoprt technique pour
+        Je suis Jean-Yves PIERRE-GEROME, responsable du support technique pour
         un éditeur de logiciel. En raison de la collaboration continue avec
         notre équipe de développeurs, j'ai décidé de suivre une formation de
         développeur web pour approfondir ma compréhension de ce domaine.
