@@ -105,7 +105,7 @@
                     </article>
                     <article class="main_container_right_article">
                         <h3>De 2002 à 2006 - Lamentin</h3>
-                        <p><span class="main_container_right_span">SGCA Mercedes Benz</span> Concessinnaire automobile</p>
+                        <p><span class="main_container_right_span">SGCA Mercedes Benz</span> Concessionnaire automobile</p>
                         <p><span class="main_container_right_italic">Assitant Informatique</span></p>
                         <ul>
                             <li>Conseiller les collaborateur</li>
