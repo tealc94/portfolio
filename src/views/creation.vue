@@ -2,6 +2,7 @@
   <div class="container_img">
     <div class="CV">
         <h2>Mon CV</h2>
+       <!-- <button class="survolOmbre" @click="ouvrirCVNouvelOnglet"><img class="imgCreation" src="../assets/CV.jpg" alt="Mon CV"></button>-->
         <button class="survolOmbre" @click="ouvrirCVNouvelOnglet"><img class="imgCreation" src="../assets/CV.jpg" alt="Mon CV"></button>
         <div>
           <p>Date de création 18/10/2023</p>
@@ -55,20 +56,20 @@
 <script>
 export default {
   methods: {
+    OpenNewTab(monFichier){
+      const fichier = process.env.BASE_URL + monFichier;
+      const nouvelOnglet = window.open('', '_blank');
+      nouvelOnglet.location.href = fichier;
+    },
+
     ouvrirCVNouvelOnglet(){
-      const fichierCV = process.env.BASE_URL + 'MonCV.html';
-      const nouvelOngletCV = window.open('', '_blank');
-      nouvelOngletCV.location.href = fichierCV;
+      this.OpenNewTab('MonCV.html');
     },
     ouvrirPDF(){
-      const fichierPDF = process.env.BASE_URL + 'Cahier_des_charges_La_socketterie.pdf';
-      const nouvelOngletPDF = window.open('', '_blank');
-      nouvelOngletPDF.location.href = fichierPDF;
+      this.OpenNewTab('Cahier_des_charges_La_socketterie.pdf');
     },
     ouvrirCommentNouvelOnglet(){
-      const fichierComment = process.env.BASE_URL + 'listeCommentaire.html';  
-      const nouvelOngletComment = window.open('', '_blank');
-      nouvelOngletComment.location.href = fichierComment;
+      this.OpenNewTab('listeCommentaire.html');
     }
   }
 };
